@@ -1,5 +1,5 @@
 {
-  "semi": true,
+  "semi": false,
   "parser": "typescript",
   "singleQuote": true,
   "printWidth": 120,

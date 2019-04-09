@@ -1,5 +1,4 @@
-export enum PlushySize {
-  FuckingHuge = 'fuckingHuge',
+export enum UnicornSize {
   Huge = 'huge',
   large = 'large',
   medium = 'medium',
@@ -8,7 +7,8 @@ export enum PlushySize {
   microscopic = 'microscopic',
 }
 
-export type PlushyUnicorn = {
-  color: number;
-  size: PlushySize;
-};
+export type Unicorn = {
+  name: string
+  color: number | string
+  size: UnicornSize
+}

@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
-const express_validator_1 = __importDefault(require("express-validator"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const compression_1 = __importDefault(require("compression"));
-const health_1 = require("./resources/health");
+const health_1 = require("./health");
+const unicorns_1 = require("./unicorns");
 const app = express_1.default();
 exports.app = app;
 app.set('port', process.env.PORT || 3000);
@@ -16,6 +16,6 @@ app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({
     extended: true,
 }));
-app.use(express_validator_1.default());
+app.use('/unicorns', unicorns_1.unicornResource);
 app.get('/health', health_1.readHealth);
 //# sourceMappingURL=app.js.map
